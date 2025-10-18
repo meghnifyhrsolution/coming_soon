@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meghnify HR Solution - Coming Soon</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Full-screen layout */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Company name styling */
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    /* "Coming Soon" text styling */
+    p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    /* Fade-in animation keyframes */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Subtle floating animation for smoothness */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    h1, p {
+      animation: fadeIn 2s ease-in-out forwards, float 4s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meghnify HR Solution</h1>
+  <p>Coming Soon</p>
+</body>
+</html>
