@@ -3,77 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meghnify HR Solution - Coming Soon</title>
+  <title>Meghnify HR Solution</title>
   <style>
-    /* Reset default margin and padding */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    /* Full-screen layout */
     body {
+      font-family: 'Poppins', Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Poppins', Arial, sans-serif;
-      height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    section {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-    }
-
-    /* Company name styling */
-    h1 {
-      font-size: 2.5rem;
-      letter-spacing: 2px;
+      text-align: center;
+      padding: 80px 20px;
       opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s ease forwards;
     }
 
-    /* "Coming Soon" text styling */
+    #home {
+      animation-delay: 0.3s;
+    }
+    #about {
+      animation-delay: 0.6s;
+    }
+    #contact {
+      animation-delay: 0.9s;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00bcd4;
+    }
+
     p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
-      animation-delay: 1s;
+      max-width: 800px;
+      font-size: 1.1rem;
     }
 
-    /* Fade-in animation keyframes */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    /* Subtle floating animation for smoothness */
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav a {
+        margin: 0 10px;
+        font-size: 0.85rem;
       }
-      50% {
-        transform: translateY(-8px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
-    }
 
-    h1, p {
-      animation: fadeIn 2s ease-in-out forwards, float 4s ease-in-out infinite alternate;
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Meghnify HR Solution</h1>
-  <p>Coming Soon</p>
+  <header>
+    <h1>Meghnify HR Solution</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Magnifying Potential. Simplifying People.</h2>
+    <p>
+      At Meghnify HR Solution, we believe every hire shapes a story — one that defines the future of your organization.
+    </p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      “At Meghnify HR Solution Private Limited, we don’t just find talent — we magnify potential.” <br /><br />
+      We believe that every great company begins with the right people and every great career starts with the right opportunity.
+      Our mission is to empower businesses and individuals to grow together through trust, integrity, and innovation.
+      By combining deep industry knowledge with a people-first approach, Meghnify HR Solution Private Limited continues
+      to redefine how organizations attract, engage, and retain exceptional talent.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      520, F Nsr Road, Sai Baba Colony, Coimbatore 641011 <br />
+      📞 8870879436 | 9080982428
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Meghnify HR Solution Pvt. Ltd. | All Rights Reserved
+  </footer>
 </body>
 </html>
